@@ -6,6 +6,9 @@ import Loadable from './components/Loadable';
 import MatxLayout from './components/MatxLayout/MatxLayout';
 import materialRoutes from 'app/views/material-kit/MaterialRoutes';
 import visa from 'app/views/visa/VisaRoutes';
+import report from 'app/views/report/ReportRoutes';
+import cmsAccount from 'app/views/cmsAccount/CmsAccount';
+import affiliateAgency from 'app/views/affiliate/AffiliateRoutes'
 // session pages
 const NotFound = Loadable(lazy(() => import('app/views/sessions/NotFound')));
 const JwtLogin = Loadable(lazy(() => import('app/views/sessions/JwtLogin')));
@@ -28,6 +31,9 @@ const routes = [
     children: [
       ...materialRoutes,
       ...visa,
+      ...report,
+      ...cmsAccount,
+      ...affiliateAgency,
       // dashboard route
       {
         path: '/dashboard/default',

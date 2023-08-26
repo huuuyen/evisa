@@ -11,20 +11,20 @@ export const navigations = [
   {
     name: 'Thống kê báo cáo',
     children: [
-      { name: 'Thống kê tổng Visa, dịch vụ', path: '/report-visa' },
-      { name: 'Thống kê doanh số đại lý', path: '/report-plance' },
+      { name: 'Thống kê tổng Visa, dịch vụ', path: '/admin/report/report-visa' },
+      { name: 'Thống kê doanh số đại lý', path: '/admin/report/report-agency' },
     ]
   },
   {
     name: 'Quản lý tài khoản CMS',
     children: [
-      { name: 'Danh sách tài khoản', path: '/cms-account' },
+      { name: 'Danh sách tài khoản', path: '/admin/cms-account' },
     ]
   },
   {
     name: 'Đại lý affiliate ',
     children: [
-      { name: 'Danh sách đại lý', path: '/affiliate' },
+      { name: 'Danh sách đại lý', path: '/admin/affiliate-agency' },
     ]
   },
   // {

@@ -112,7 +112,7 @@ export default function MaxWidthDialog({ openDialog, handleAddService, handleClo
                                     getOptionLabel={(option) => option.label}
                                     getOptionDisabled={(option) => option === suggestions[0] || option === suggestions[2]}
                                     renderInput={(params) => (
-                                        <TextField {...params} label="Thời gian hoàn thành dịch vụ" variant="standard" fullWidth />
+                                        <TextField {...params} label="Thời gian hoàn thành dịch vụ" fullWidth />
                                     )}
                                 />
                             </Grid>

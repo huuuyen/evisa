@@ -2,7 +2,7 @@ import { Stack } from '@mui/material';
 import { Box, styled, Button } from '@mui/material';
 import { Breadcrumb, SimpleCard } from 'app/components';
 import FormSearch from './FormSearch';
-import PaginationTable from './TableVisa';
+import PaginationTable from './Table';
 import { Span } from 'app/components/Typography';
 // import StepperForm from './StepperForm';
 
@@ -22,11 +22,11 @@ const StyleSpan = styled(Span)(({ theme }) => ({
     fontSize: "19px",
     fontWeight: "700"
 }));
-const Visa = () => {
+const ProductService = () => {
     return (
         <Container>
             <Stack spacing={3}>
-                <StyleSpan># Quản lý visa / Thêm visa mới cần duyệt</StyleSpan>
+                <StyleSpan># Thống kê báo cáo / Sản phẩm dịch vụ</StyleSpan>
                 {/* <SimpleCard > */}
                 <FormSearch />
                 {/* </SimpleCard> */}
@@ -40,4 +40,4 @@ const Visa = () => {
     );
 };
 
-export default Visa;
+export default ProductService;

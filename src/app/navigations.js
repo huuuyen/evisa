@@ -5,6 +5,7 @@ export const navigations = [
     children: [
       { name: 'Danh sách visa', path: '/admin/visa' },
       { name: 'Sản phẩm dịch vụ', path: '/admin/product-service' },
+      { name: 'Phí dịch vụ theo quốc gia', path: '/admin/country-service' },
     ]
   },
   {

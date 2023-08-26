@@ -23,7 +23,7 @@ import { Span } from "app/components/Typography";
 import { useEffect, useState } from "react";
 import { TextValidator, ValidatorForm } from "react-material-ui-form-validator";
 
-import ImageUpload from './imageFile';
+import ImageUpload from './ImageFile';
 
 
 const suggestions = [

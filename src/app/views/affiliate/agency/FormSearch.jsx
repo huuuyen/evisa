@@ -34,34 +34,6 @@ const suggestions = [
     { label: 'Algeria' },
     { label: 'American Samoa' },
     { label: 'Andorra' },
-    { label: 'Angola' },
-    { label: 'Anguilla' },
-    { label: 'Antarctica' },
-    { label: 'Antigua and Barbuda' },
-    { label: 'Argentina' },
-    { label: 'Armenia' },
-    { label: 'Aruba' },
-    { label: 'Australia' },
-    { label: 'Austria' },
-    { label: 'Azerbaijan' },
-    { label: 'Bahamas' },
-    { label: 'Bahrain' },
-    { label: 'Bangladesh' },
-    { label: 'Barbados' },
-    { label: 'Belarus' },
-    { label: 'Belgium' },
-    { label: 'Belize' },
-    { label: 'Benin' },
-    { label: 'Bermuda' },
-    { label: 'Bhutan' },
-    { label: 'Bolivia, Plurinational State of' },
-    { label: 'Bonaire, Sint Eustatius and Saba' },
-    { label: 'Bosnia and Herzegovina' },
-    { label: 'Botswana' },
-    { label: 'Bouvet Island' },
-    { label: 'Brazil' },
-    { label: 'British Indian Ocean Territory' },
-    { label: 'Brunei Darussalam' },
 ];
 const StyledButton = styled(Button)(({ theme }) => ({
     margin: theme.spacing(1),
@@ -119,8 +91,8 @@ const SimpleForm = () => {
                     <Grid item lg={2} md={2} sm={12} xs={12} sx={{ mt: 2 }}>
                         <TextField
                             type="text"
-                            name="user"
-                            label="Nhập tên tài khoản"
+                            name="agency"
+                            label="Nhập tên đại lý"
                             variant="standard"
                         />
                     </Grid>
@@ -132,16 +104,6 @@ const SimpleForm = () => {
                             label="Nhập tên"
 
                         />
-                    </Grid>
-                    <Grid item lg={2} md={2} sm={12} xs={12} sx={{ mt: 2 }}>
-                        <TextField
-                            variant="standard"
-                            type="text"
-                            name="phone"
-                            label="Nhập SĐT"
-
-                        />
-
                     </Grid>
                 </Grid>
 

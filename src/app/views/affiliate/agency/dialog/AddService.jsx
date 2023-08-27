@@ -120,6 +120,11 @@ export default function MaxWidthDialog({ openDialog, handleAddService, handleClo
                                 />
                             </Grid>
                             <Grid style={gridItemStyle} item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2 }}>
+                                <StyleLable>Link affiliate</StyleLable>
+                                <StyleTextField
+                                    type="text"
+                                    name="username"
+                                />
                             </Grid>
                             <Grid style={gridItemStyle} item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2 }}>
                                 <StyleLable>Mật khẩu</StyleLable>
@@ -139,28 +144,18 @@ export default function MaxWidthDialog({ openDialog, handleAddService, handleClo
                         </Grid>
                         <StyleGrid container spacing={1}>
                             <Grid style={gridItemStyle} item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2 }}>
-                                <StyleLable>Họ và tên</StyleLable>
+                                <StyleLable>Tên đại lý</StyleLable>
                                 <StyleTextField
                                     type="text"
-                                    name="fullname"
+                                    name="agencyName"
                                 />
                             </Grid>
                             <Grid style={gridItemStyle} item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2 }}>
-                                <StyleLable>Ngày sinh</StyleLable>
-                                <LocalizationProvider dateAdapter={AdapterDateFns}>
-                                    <DatePicker
-                                        value={date}
-                                        name="date"
-                                        onChange={handleDateChange}
-                                        renderInput={(props) => (
-                                            <TextField
-                                                {...props}
-                                                id="mui-pickers-date"
-                                                sx={{ mb: 2, width: "100%" }}
-                                            />
-                                        )}
-                                    />
-                                </LocalizationProvider>
+                                <StyleLable>Địa chỉ</StyleLable>
+                                <StyleTextField
+                                    type="text"
+                                    name="address"
+                                />
                             </Grid>
                             <Grid style={gridItemStyle} item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2 }}>
                                 <StyleLable>Số điện thoại</StyleLable>
@@ -170,42 +165,12 @@ export default function MaxWidthDialog({ openDialog, handleAddService, handleClo
                                 />
                             </Grid>
                             <Grid style={gridItemStyle} item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2 }}>
-                                <StyleLable>Giới tính</StyleLable>
-                                <AutoComplete
-                                    name="sex"
-                                    options={ListSex}
-                                    getOptionLabel={(option) => option.label}
-                                    renderInput={(params) => (
-                                        <TextField {...params} fullWidth />
-                                    )}
-                                />
-                            </Grid>
-                            <Grid style={gridItemStyle} item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2 }}>
-                                <StyleLable>Email:</StyleLable>
+                                <StyleLable>Email</StyleLable>
                                 <StyleTextField
                                     type="text"
                                     name="email"
                                 />
                             </Grid>
-                            <Grid style={gridItemStyle} item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2 }}>
-                                <StyleLable>Chọn quyền</StyleLable>
-                                <AutoComplete
-                                    name="sex"
-                                    options={ListSex}
-                                    getOptionLabel={(option) => option.label}
-                                    renderInput={(params) => (
-                                        <TextField {...params} fullWidth />
-                                    )}
-                                />
-                            </Grid>
-                            <Grid style={gridItemStyle} item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2 }}>
-                                <StyleLable>Địa chỉ:</StyleLable>
-                                <StyleTextField
-                                    type="text"
-                                    name="email"
-                                />
-                            </Grid>
-
                         </StyleGrid>
 
                     </form>

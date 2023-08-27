@@ -7,23 +7,35 @@ import { Formik } from 'formik';
 import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
-
+import { Span } from "app/components/Typography";
 const FlexBox = styled(Box)(() => ({ display: 'flex', alignItems: 'center' }));
 
 const JustifyBox = styled(FlexBox)(() => ({ justifyContent: 'center' }));
 
 const ContentBox = styled(Box)(() => ({
-  height: '100%',
   padding: '32px',
   position: 'relative',
-  background: 'rgba(0, 0, 0, 0.01)'
-}));
+  background: 'rgba(0, 0, 0, 0.01)',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  height: '100%',
 
+}));
+const StyleSpanTitle = styled(Span)(() => ({
+  fontSize: "19px",
+  fontWeight: "700",
+  margin: "30px 0"
+
+}));
+const StyleLoadingButton = styled(LoadingButton)(() => ({
+  background: '#810C11',
+  width: '100%',
+
+}));
 const JWTRoot = styled(JustifyBox)(() => ({
-  background: '#1A2038',
   minHeight: '100% !important',
   '& .card': {
-    maxWidth: 800,
     minHeight: 400,
     margin: '1rem',
     display: 'flex',
@@ -31,6 +43,7 @@ const JWTRoot = styled(JustifyBox)(() => ({
     alignItems: 'center'
   }
 }));
+
 
 // inital login credentials
 const initialValues = {
@@ -68,27 +81,24 @@ const JwtLogin = () => {
     <JWTRoot>
       <Card className="card">
         <Grid container>
-          <Grid item sm={6} xs={12}>
-            <JustifyBox p={4} height="100%" sx={{ minWidth: 320 }}>
-              <img src="/assets/images/illustrations/dreamer.svg" width="100%" alt="" />
-            </JustifyBox>
-          </Grid>
-
-          <Grid item sm={6} xs={12}>
+          <Grid item sm={4} xs={12}>
             <ContentBox>
+              <StyleSpanTitle>Đăng nhập CMS Evisa Việt Nam</StyleSpanTitle>
               <Formik
                 onSubmit={handleFormSubmit}
                 initialValues={initialValues}
                 validationSchema={validationSchema}
               >
+
                 {({ values, errors, touched, handleChange, handleBlur, handleSubmit }) => (
                   <form onSubmit={handleSubmit}>
+
                     <TextField
                       fullWidth
                       size="small"
                       type="email"
                       name="email"
-                      label="Email"
+                      label="Email đăng nhập"
                       variant="outlined"
                       onBlur={handleBlur}
                       value={values.email}
@@ -103,7 +113,7 @@ const JwtLogin = () => {
                       size="small"
                       name="password"
                       type="password"
-                      label="Password"
+                      label="Mật khẩu"
                       variant="outlined"
                       onBlur={handleBlur}
                       value={values.password}
@@ -112,51 +122,24 @@ const JwtLogin = () => {
                       error={Boolean(errors.password && touched.password)}
                       sx={{ mb: 1.5 }}
                     />
-
-                    <FlexBox justifyContent="space-between">
-                      <FlexBox gap={1}>
-                        <Checkbox
-                          size="small"
-                          name="remember"
-                          onChange={handleChange}
-                          checked={values.remember}
-                          sx={{ padding: 0 }}
-                        />
-
-                        <Paragraph>Remember Me</Paragraph>
-                      </FlexBox>
-
-                      <NavLink
-                        to="/session/forgot-password"
-                        style={{ color: theme.palette.primary.main }}
-                      >
-                        Forgot password?
-                      </NavLink>
-                    </FlexBox>
-
-                    <LoadingButton
+                    <StyleLoadingButton
                       type="submit"
                       color="primary"
                       loading={loading}
                       variant="contained"
                       sx={{ my: 2 }}
                     >
-                      Login
-                    </LoadingButton>
-
-                    <Paragraph>
-                      Don't have an account?
-                      <NavLink
-                        to="/session/signup"
-                        style={{ color: theme.palette.primary.main, marginLeft: 5 }}
-                      >
-                        Register
-                      </NavLink>
-                    </Paragraph>
+                      Đăng nhập
+                    </StyleLoadingButton>
                   </form>
                 )}
               </Formik>
             </ContentBox>
+          </Grid>
+          <Grid item sm={8} xs={12}>
+            <JustifyBox p={4} height="100%" sx={{ minWidth: 320 }}>
+              <img src="/assets/images/illustrations/logo-login.svg" width="100%" alt="" />
+            </JustifyBox>
           </Grid>
         </Grid>
       </Card>

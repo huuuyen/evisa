@@ -108,12 +108,10 @@ const SimpleTable = () => {
                     <TableRow>
                         <StyledTableCell align="center" style={{ width: '50px' }}>stt</StyledTableCell>
                         <StyledTableCell align="left" style={{ width: '100px' }}>Action</StyledTableCell>
-                        <StyledTableCell align="left">Tên tài khoản</StyledTableCell>
-                        <StyledTableCell align="left">Họ và tên</StyledTableCell>
-                        <StyledTableCell align="left">Số điện thoại</StyledTableCell>
-                        <StyledTableCell align="left">Quyền</StyledTableCell>
+                        <StyledTableCell align="left">Tên đại lý</StyledTableCell>
+                        <StyledTableCell align="left">Link affiliate</StyledTableCell>
+                        <StyledTableCell align="left">Tổng số Evisa</StyledTableCell>
                         <StyledTableCell align="left">Trạng thái</StyledTableCell>
-                        <StyledTableCell align="left">Ngày tạo</StyledTableCell>
                     </TableRow>
                 </TableHead>
 
@@ -124,25 +122,18 @@ const SimpleTable = () => {
                             <StyledTableCell align="left">
                                 <IconButton>
                                     <Icon color="edit">edit</Icon>
-                                    <LockResetIcon />
+                                    <Icon color="edit">delete</Icon>
                                 </IconButton>
                             </StyledTableCell>
                             <StyledTableCell align="left">{subscriber.username}</StyledTableCell>
                             <StyledTableCell align="left">{subscriber.fullname}</StyledTableCell>
                             <StyledTableCell align="left">{subscriber.phone}</StyledTableCell>
-                            <StyledTableCell align="left">{subscriber.role}</StyledTableCell>
                             <StyledTableCell align="left">{subscriber.status}
                                 <Switch
                                     checked={subscriber.status}
                                     style={{ color: "#34A853" }}
                                 />
                             </StyledTableCell>
-                            <StyledTableCell align="left">{subscriber.date}</StyledTableCell>
-                            {/* <StyledTableCell align="left">
-                                <IconButton>
-                                    <Icon color="error">close</Icon>
-                                </IconButton>
-                            </StyledTableCell> */}
                         </TableRow>
                     ))}
                 </TableBody>

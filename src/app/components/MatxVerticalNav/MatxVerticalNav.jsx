@@ -41,13 +41,14 @@ const ExtAndIntCommon = {
 };
 const ExternalLink = styled('a')(({ theme }) => ({
   ...ExtAndIntCommon,
-  color: theme.palette.text.primary,
+  color: "#000000",
 }));
 
 const InternalLink = styled(Box)(({ theme }) => ({
   '& a': {
     ...ExtAndIntCommon,
-    color: theme.palette.text.primary,
+    color: "#000000",
+    // color: theme.palette.text.primary,
   },
   '& .navItemActive': {
     backgroundColor: 'rgba(255, 255, 255, 0.16)',

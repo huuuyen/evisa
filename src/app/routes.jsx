@@ -9,6 +9,16 @@ import visa from 'app/views/visa/VisaRoutes';
 import report from 'app/views/report/ReportRoutes';
 import cmsAccount from 'app/views/cmsAccount/CmsAccount';
 import affiliateAgency from 'app/views/affiliate/AffiliateRoutes'
+// landing page
+
+const HomePage = Loadable(lazy(() => import('app/views/client/HomePage/Index')));
+const FormEvisa = Loadable(lazy(() => import('app/views/client/FormVisa/Index')));
+const FAQ = Loadable(lazy(() => import('app/views/client/FAQ/Index')));
+
+const CheckEvisa = Loadable(lazy(() => import('app/views/client/CheckEvisa/Index')));
+
+
+
 // session pages
 const NotFound = Loadable(lazy(() => import('app/views/sessions/NotFound')));
 const JwtLogin = Loadable(lazy(() => import('app/views/sessions/JwtLogin')));
@@ -49,14 +59,18 @@ const routes = [
       }
     ]
   },
-
+  // landing page
+  { path: '/index', element: <HomePage /> },
+  { path: '/form-evisa', element: <FormEvisa /> },
+  { path: '/FAQ', element: <FAQ /> },
+  { path: '/check-evisa', element: <CheckEvisa /> },
   // session pages route
   { path: '/session/404', element: <NotFound /> },
   { path: '/session/signin', element: <JwtLogin /> },
   { path: '/session/signup', element: <JwtRegister /> },
   { path: '/session/forgot-password', element: <ForgotPassword /> },
-
-  { path: '/', element: <Navigate to="dashboard/default" /> },
+  { path: '/admin', element: <Navigate to="/session/signin" /> },
+  { path: '/', element: <Navigate to="index" /> },
   { path: '*', element: <NotFound /> }
 ];
 

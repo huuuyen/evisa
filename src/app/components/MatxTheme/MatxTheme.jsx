@@ -4,6 +4,7 @@ import useSettings from 'app/hooks/useSettings';
 const MatxTheme = ({ children }) => {
   const { settings } = useSettings();
   let activeTheme = { ...settings.themes[settings.activeTheme] };
+  console.log('activeTheme', activeTheme)
 
   return (
     <ThemeProvider theme={activeTheme}>

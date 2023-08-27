@@ -19,9 +19,8 @@ const SidebarNavRoot = styled(Box)(({ theme, width, bg, image }) => ({
   backgroundSize: 'cover',
   zIndex: 111,
   overflow: 'hidden',
-  color: theme.palette.text.primary,
   transition: 'all 250ms ease-in-out',
-  backgroundImage: `linear-gradient(to bottom, rgba(${bg}, 0.96), rgba(${bg}, 0.96)), url(${image})`,
+  // backgroundImage: `linear-gradient(to bottom, rgba(${bg}, 0.96), rgba(${bg}, 0.96)), url(${image})`,
   '&:hover': {
     width: sideNavWidth,
     '& .sidenavHoverShow': { display: 'block' },

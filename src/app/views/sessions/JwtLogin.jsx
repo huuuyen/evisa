@@ -7,7 +7,10 @@ import { Formik } from 'formik';
 import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
+import Container from '@mui/material/Container'
 import { Span } from "app/components/Typography";
+import Header from 'app/components/client/layout/header'
+import Footer from 'app/components/client/layout/footer'
 const FlexBox = styled(Box)(() => ({ display: 'flex', alignItems: 'center' }));
 
 const JustifyBox = styled(FlexBox)(() => ({ justifyContent: 'center' }));
@@ -71,79 +74,86 @@ const JwtLogin = () => {
     setLoading(true);
     try {
       await login(values.email, values.password);
-      navigate('/');
+      navigate('/admin/visa');
     } catch (e) {
       setLoading(false);
     }
   };
 
   return (
-    <JWTRoot>
-      <Card className="card">
-        <Grid container>
-          <Grid item sm={4} xs={12}>
-            <ContentBox>
-              <StyleSpanTitle>Đăng nhập CMS Evisa Việt Nam</StyleSpanTitle>
-              <Formik
-                onSubmit={handleFormSubmit}
-                initialValues={initialValues}
-                validationSchema={validationSchema}
-              >
+    <>
+      <Header />
+      <JWTRoot>
+        <Container sx={{ py: { xs: 2, md: 3 } }}>
+          <Card className="card">
+            <Grid container>
+              <Grid item sm={4} xs={12}>
+                <ContentBox>
+                  <StyleSpanTitle>Đăng nhập CMS Evisa Việt Nam</StyleSpanTitle>
+                  <Formik
+                    onSubmit={handleFormSubmit}
+                    initialValues={initialValues}
+                    validationSchema={validationSchema}
+                  >
 
-                {({ values, errors, touched, handleChange, handleBlur, handleSubmit }) => (
-                  <form onSubmit={handleSubmit}>
+                    {({ values, errors, touched, handleChange, handleBlur, handleSubmit }) => (
+                      <form onSubmit={handleSubmit}>
 
-                    <TextField
-                      fullWidth
-                      size="small"
-                      type="email"
-                      name="email"
-                      label="Email đăng nhập"
-                      variant="outlined"
-                      onBlur={handleBlur}
-                      value={values.email}
-                      onChange={handleChange}
-                      helperText={touched.email && errors.email}
-                      error={Boolean(errors.email && touched.email)}
-                      sx={{ mb: 3 }}
-                    />
+                        <TextField
+                          fullWidth
+                          size="small"
+                          type="email"
+                          name="email"
+                          label="Email đăng nhập"
+                          variant="outlined"
+                          onBlur={handleBlur}
+                          value={values.email}
+                          onChange={handleChange}
+                          helperText={touched.email && errors.email}
+                          error={Boolean(errors.email && touched.email)}
+                          sx={{ mb: 3 }}
+                        />
 
-                    <TextField
-                      fullWidth
-                      size="small"
-                      name="password"
-                      type="password"
-                      label="Mật khẩu"
-                      variant="outlined"
-                      onBlur={handleBlur}
-                      value={values.password}
-                      onChange={handleChange}
-                      helperText={touched.password && errors.password}
-                      error={Boolean(errors.password && touched.password)}
-                      sx={{ mb: 1.5 }}
-                    />
-                    <StyleLoadingButton
-                      type="submit"
-                      color="primary"
-                      loading={loading}
-                      variant="contained"
-                      sx={{ my: 2 }}
-                    >
-                      Đăng nhập
-                    </StyleLoadingButton>
-                  </form>
-                )}
-              </Formik>
-            </ContentBox>
-          </Grid>
-          <Grid item sm={8} xs={12}>
-            <JustifyBox p={4} height="100%" sx={{ minWidth: 320 }}>
-              <img src="/assets/images/illustrations/logo-login.svg" width="100%" alt="" />
-            </JustifyBox>
-          </Grid>
-        </Grid>
-      </Card>
-    </JWTRoot>
+                        <TextField
+                          fullWidth
+                          size="small"
+                          name="password"
+                          type="password"
+                          label="Mật khẩu"
+                          variant="outlined"
+                          onBlur={handleBlur}
+                          value={values.password}
+                          onChange={handleChange}
+                          helperText={touched.password && errors.password}
+                          error={Boolean(errors.password && touched.password)}
+                          sx={{ mb: 1.5 }}
+                        />
+                        <StyleLoadingButton
+                          type="submit"
+                          color="primary"
+                          loading={loading}
+                          variant="contained"
+                          sx={{ my: 2 }}
+                        >
+                          Đăng nhập
+                        </StyleLoadingButton>
+                      </form>
+                    )}
+                  </Formik>
+                </ContentBox>
+              </Grid>
+              <Grid item sm={8} xs={12}>
+                <JustifyBox p={4} height="100%" sx={{ minWidth: 320 }}>
+                  <img src="/assets/images/illustrations/logo-login.svg" width="100%" alt="" />
+                </JustifyBox>
+              </Grid>
+            </Grid>
+          </Card>
+        </Container>
+      </JWTRoot>
+      <Footer />
+    </>
+
   );
 };
 

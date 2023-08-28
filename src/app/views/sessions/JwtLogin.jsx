@@ -37,7 +37,6 @@ const StyleLoadingButton = styled(LoadingButton)(() => ({
 
 }));
 const JWTRoot = styled(JustifyBox)(() => ({
-  minHeight: '100% !important',
   '& .card': {
     minHeight: 400,
     margin: '1rem',
@@ -85,7 +84,7 @@ const JwtLogin = () => {
       <Header />
       <JWTRoot>
         <Container sx={{ py: { xs: 2, md: 3 } }}>
-          <Card className="card">
+          <Box className="card">
             <Grid container>
               <Grid item sm={4} xs={12}>
                 <ContentBox>
@@ -148,7 +147,7 @@ const JwtLogin = () => {
                 </JustifyBox>
               </Grid>
             </Grid>
-          </Card>
+          </Box>
         </Container>
       </JWTRoot>
       <Footer />

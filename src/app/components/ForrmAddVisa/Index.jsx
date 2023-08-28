@@ -117,8 +117,11 @@ const Container = styled('div')(({ theme }) => ({
 }));
 
 
+const gridItemStyle = {
+    paddingLeft: '30px', // Thêm padding bên trái
+    paddingRight: '30px', // Thêm padding bên phải
 
-
+};
 
 const SimpleForm = () => {
 
@@ -127,11 +130,6 @@ const SimpleForm = () => {
         new Date('2014-08-18T21:11:54')
     )
     const [uploadedFiles, setUploadedFiles] = useState([]);
-
-    const gridItemStyle = {
-        paddingLeft: '30px', // Thêm padding bên trái
-        paddingRight: '30px', // Thêm padding bên phải
-    };
     useEffect(() => {
         ValidatorForm.addValidationRule("isPasswordMatch", (value) => {
             if (value !== state.password) return false;
@@ -175,7 +173,7 @@ const SimpleForm = () => {
                         <>
                             <StyleTitle>Foreigner's images</StyleTitle>
                             <Grid container spacing={1}>
-                                <Grid style={gridItemStyle} item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2 }}>
+                                <Grid style={gridItemStyle} item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2, px: { xs: 2, md: 8 }, }}>
                                     <>
                                         <StyleLable>Portrait photography</StyleLable>
                                         <ImageUpload id="image-upload-1" onFileChange={handleFileChange} />
@@ -187,7 +185,6 @@ const SimpleForm = () => {
                                         <ImageUpload id="image-upload-2" onFileChange={handleFileChange} />
                                     </>
                                 </Grid>
-
                             </Grid>
                         </>
                         <>

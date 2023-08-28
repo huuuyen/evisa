@@ -384,7 +384,6 @@ const SimpleForm = () => {
                                                 type="text"
                                                 name="ReEmail"
                                                 value={firstName || ""}
-
                                             />
                                         </>
                                     </Grid>

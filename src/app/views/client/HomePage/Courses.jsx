@@ -61,12 +61,8 @@ const HomePopularCourse = (props) => {
         dots: true,
         infinite: true,
         speed: 500,
-        // slidesToShow: 1,
         slidesToScroll: 1,
-
-
-        // autoplay: true,
-        // speed: 300,
+        autoplay: true,
         slidesToShow: matchMobileView ? 1 : 3,
         slidesToScroll: 1,
         prevArrow: <SliderArrow type="prev" />,

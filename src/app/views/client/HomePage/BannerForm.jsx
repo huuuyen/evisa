@@ -13,7 +13,7 @@ import InputBase from '@mui/material/InputBase'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 // import { StyledButton } from '../styled-button'
-
+import { useNavigate } from 'react-router-dom';
 const StyleTextField = styled(TextField)(() => ({
     width: '100%',
 }));
@@ -33,6 +33,11 @@ const suggestions = [
 ];
 
 const Banner = () => {
+    const navigate = useNavigate();
+    const handleAddVisa = () => {
+        console.log('tesst')
+        navigate('/form-evisa')
+    }
     return (
         <Box sx={{ background: "#810C11", color: "#FFFFFF", marginTop: "2px" }}>
             <Container>
@@ -100,7 +105,7 @@ const Banner = () => {
                                 </Grid>
                             </Grid>
                             <Box style={{ marginTop: "40px" }}>
-                                <Button style={{ width: "260px", background: "#810C11", fontWeight: "bold", color: "#FFFFFF", borderRadius: "5px" }} size="large">
+                                <Button onClick={handleAddVisa()} style={{ width: "260px", background: "#810C11", fontWeight: "bold", color: "#FFFFFF", borderRadius: "5px" }} size="large">
                                     Tiếp tục
                                 </Button>
                             </Box>

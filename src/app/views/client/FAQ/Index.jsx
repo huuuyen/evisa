@@ -89,7 +89,7 @@ export default function Index() {
                                 </Box>
                                 <AccordionRoot>
                                     {listFAQ.map(({ id, title, detail }) => (
-                                        <Accordion>
+                                        <Accordion style={{ margin: "10px 0" }}>
                                             <AccordionSummary
                                                 id="panel1a-header"
                                                 expandIcon={<ExpandMoreIcon />}

@@ -9,6 +9,8 @@ import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import LanguageSelector from 'app/components/client/layout/language';
+
 import {
     Button,
     Box,
@@ -73,6 +75,7 @@ export default function Index() {
     ]
     return (
         <>
+            <LanguageSelector />
             <Header />
             <Box >
                 <Container sx={{ py: { xs: 2, md: 3 } }}>

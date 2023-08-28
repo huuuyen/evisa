@@ -1,0 +1,18 @@
+{
+    "Home": "Home",
+    "ServiceVisa": "Service Visa",
+    "FAQ": "FAQ",
+    "CheckVisa": "Check Visa",
+    "TitleBanner": "The Most Trusted Vietnam Visa, Immigration & Expatriate Consultant",
+    "Confirm": "Confirm",
+    "username": {
+        "label": "Nutzername",
+        "placeholder": "Platzhalter..."
+    },
+    "password": {
+        "label": "Kennwort",
+        "placeholder": "passwort platzhalter..."
+    },
+    "location": "Geben Sie den Standort ein",
+    "Address": "Gib die Adresse ein"
+}

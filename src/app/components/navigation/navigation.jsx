@@ -2,30 +2,31 @@ import React, { FC, useState } from 'react'
 import Box from '@mui/material/Box'
 import { Link as ScrollLink } from 'react-scroll'
 import { useNavigate, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'
 // import { navigations } from './navigation.data'
 let navigations = [
     {
-        label: 'Trang chủ',
+        label: 'Home',
         path: '/index', // '/',
     },
 
     {
-        label: 'Dịch vụ Visa',
-        path: '/service', // '/testimonial',
+        label: 'ServiceVisa',
+        path: '/form-evisa', // '/testimonial',
     },
     {
         label: 'FAQ',
         path: '/FAQ', // '/mentors',
     },
     {
-        label: 'Tra cứu evisa',
+        label: 'CheckVisa',
         path: '/check-evisa', // '/mentors',
     },
 ]
 const Navigation = (visibleMenu) => {
     const navigate = useNavigate();
     const [selectedMenu, setSelectedMenu] = useState('');
-
+    const { t } = useTranslation();
 
     const handleRoute = (event, path) => {
         navigate(`/${path}`)
@@ -96,7 +97,7 @@ const Navigation = (visibleMenu) => {
             >
                 <Link
                     key={destination}
-                    to={destination}> {label}</Link>
+                    to={destination}>{t(label)}</Link>
 
             </Box>
         ))}

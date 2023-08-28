@@ -1,0 +1,18 @@
+{
+    "Home": "Trang chủ",
+    "ServiceVisa": "Dịch vụ visa",
+    "FAQ": "FAQ",
+    "CheckVisa": "Tra cứu evisa",
+    "TitleBanner": "Nhà tư vấn visa, nhập cư và người nước ngoài đáng tin cậy nhất tại Việt Nam",
+    "Confirm": "Xác nhận",
+    "username": {
+        "label": "Nutzername",
+        "placeholder": "Platzhalter..."
+    },
+    "password": {
+        "label": "Kennwort",
+        "placeholder": "passwort platzhalter..."
+    },
+    "location": "Geben Sie den Standort ein",
+    "Address": "Gib die Adresse ein"
+}

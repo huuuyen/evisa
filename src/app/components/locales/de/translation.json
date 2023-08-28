@@ -1,0 +1,18 @@
+{
+    "Home": "Daheim",
+    "ServiceVisa": "Service Visa",
+    "FAQ": "FAQ",
+    "CheckVisa": "Suchen Visa",
+    "TitleBanner": "Der vertrauenswürdigste Berater für Visum, Einwanderung und Expatriate in Vietnam",
+    "Confirm": "Confirm",
+    "username": {
+        "label": "Nutzername",
+        "placeholder": "Platzhalter..."
+    },
+    "password": {
+        "label": "Kennwort",
+        "placeholder": "passwort platzhalter..."
+    },
+    "location": "Geben Sie den Standort ein",
+    "Address": "Gib die Adresse ein"
+}

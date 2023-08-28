@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Box from '@mui/material/Box'
 // import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "app/components/client/layout/footer.js";
 import Header from "app/components/client/layout/header";
 import Banner from './BannerForm'
 import VietNamVisa from './VietNam-visa'
 import Courses from './Courses'
+import LanguageSelector from 'app/components/client/layout/language';
 export default function Index() {
     let dataService = [
         { id: 1, path: "/assets/images/content/service1.PNG", title: "Fastrack", backgroundColor: "#FF686F" },
@@ -20,12 +21,15 @@ export default function Index() {
     ]
     return (
         <>
-            <Header />
-            <Banner />
-            <VietNamVisa />
-            <Courses data={dataService} title="Other Services" />
-            <Courses data={dataComboProduct} title="Combo product" />
-            <Footer />
+            <Box>
+                <LanguageSelector />
+                <Header />
+                <Banner />
+                <VietNamVisa />
+                <Courses data={dataService} title="Other Services" />
+                <Courses data={dataComboProduct} title="Combo product" />
+                <Footer />
+            </Box>
         </>
     );
 }

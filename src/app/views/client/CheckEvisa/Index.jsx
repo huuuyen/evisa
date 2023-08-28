@@ -21,7 +21,7 @@ import {
     Checkbox,
     Radio
 } from "@mui/material";
-
+import LanguageSelector from 'app/components/client/layout/language';
 
 const StyleTextField = styled(TextField)(() => ({
     width: '100%',
@@ -38,6 +38,7 @@ const StyleLable = styled(Span)(() => ({
 export default function Index() {
     return (
         <>
+            <LanguageSelector />
             <Header />
             <Box >
                 <Container sx={{ py: { xs: 2, md: 3 } }}>

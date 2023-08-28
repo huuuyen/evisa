@@ -13,6 +13,7 @@ import { Menu, Close } from '@mui/icons-material'
 const Header = () => {
     const [visibleMenu, setVisibleMenu] = useState(false)
     const { breakpoints } = useTheme()
+
     const matchMobileView = useMediaQuery(breakpoints.down('md'))
 
     return (

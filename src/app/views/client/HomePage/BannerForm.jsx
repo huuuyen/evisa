@@ -14,6 +14,7 @@ import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 // import { StyledButton } from '../styled-button'
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'
 const StyleTextField = styled(TextField)(() => ({
     width: '100%',
 }));
@@ -33,10 +34,13 @@ const suggestions = [
 ];
 
 const Banner = () => {
+    const { t } = useTranslation();
     const navigate = useNavigate();
-    const handleAddVisa = () => {
-        console.log('tesst')
-        navigate('/form-evisa')
+
+
+    const handleRouteService = () => {
+        // console.log('tesst')
+        // navigate('/form-evisa')
     }
     return (
         <Box sx={{ background: "#810C11", color: "#FFFFFF", marginTop: "2px" }}>
@@ -51,7 +55,7 @@ const Banner = () => {
                     }}
                 >
                     <Typography variant="h2" component="h2" sx={{ mb: 1, fontWeight: "bold", fontSize: { xs: 15, md: 35 } }}>
-                        The Most Trusted Vietnam Visa, Immigration & Expatriate Consultant
+                        {t("TitleBanner")}
                     </Typography>
                     <Box sx={{
                         backgroundColor: 'white',
@@ -105,8 +109,8 @@ const Banner = () => {
                                 </Grid>
                             </Grid>
                             <Box style={{ marginTop: "40px" }}>
-                                <Button onClick={handleAddVisa()} style={{ width: "260px", background: "#810C11", fontWeight: "bold", color: "#FFFFFF", borderRadius: "5px" }} size="large">
-                                    Tiếp tục
+                                <Button onClick={handleRouteService()} style={{ width: "260px", background: "#810C11", fontWeight: "bold", color: "#FFFFFF", borderRadius: "5px" }} size="large">
+                                    {t("Confirm")}
                                 </Button>
                             </Box>
                         </Box>
